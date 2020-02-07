@@ -37,7 +37,7 @@ def valid_proof(block_string, proof):
     guess = f'{block_string}{proof}'.encode()
     guess_hash = hashlib.sha256(guess).hexdigest()
     # print(guess_hash)
-    return guess_hash[:6] == '000000'
+    return guess_hash[:5] == '00000'
 
 
 if __name__ == '__main__':
